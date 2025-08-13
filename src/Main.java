@@ -6,28 +6,30 @@ public class Main {
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //zadanie 2
-        isEven();
+        //zadanie 4
+        temperatureAssessment();
         /**
          * Output:
-         * Podaj liczbę całkowitą:
          * asd
          * Zły format - podaj liczbę całkowitą
          * Podaj liczbę całkowitą:
-         * 15.5
-         * Zły format - podaj liczbę całkowitą
-         * Podaj liczbę całkowitą:
-         * 20
-         * Parzysta
+         * 15
+         * Chłodno
          */
     }
 
-    private static void isEven() {
-        if (readNumber() % 2 == 0)
-            System.out.println("Parzysta");
+    private static void temperatureAssessment() {
+        int temperature = readNumber();
+        if (temperature < 0)
+            System.out.println("Mróz");
+        else if (temperature < 16)
+            System.out.println("Chłodno");
+        else if (temperature < 26)
+            System.out.println("Ciepło");
         else
-            System.out.println("Nieparzysta");
+            System.out.println("Gorąco");
     }
+
 
     private static int readNumber() {
         int number = 0;
