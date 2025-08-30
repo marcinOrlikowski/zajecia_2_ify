@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     private static final Scanner SCANNER = new Scanner(System.in);
-    
+
     public static void main(String[] args) {
         //zadanie 1
         AgeVerification();
@@ -24,14 +24,14 @@ public class Main {
 
     }
 
-    private static void AgeVerification(){
+    private static void AgeVerification() {
         if (readAge() < 18)
             System.out.println("Nie jesteś pełnoletni");
         else
             System.out.println("Jesteś pełnoletni");
     }
 
-    private static int readAge(){
+    private static int readAge() {
         int age = 0;
         boolean isAgeCorrect = false;
         do {
@@ -42,7 +42,7 @@ public class Main {
                     System.err.println("Podano nieprawidłowy wiek");
                 else isAgeCorrect = true;
             } catch (Exception e) {
-                System.err.println("Nieprawidłowy format - podaj liczbe całkowitą");;
+                System.err.println("Nieprawidłowy format - podaj liczbe całkowitą");
             } finally {
                 SCANNER.nextLine();
             }
