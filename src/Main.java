@@ -36,7 +36,17 @@ public class Main {
          * 20
          * Parzysta
          */
-
+        //zadanie 3
+        ageCategorization();
+        /**
+         * Output:
+         * Podaj wiek:
+         * asd
+         * Nieprawidłowy format - podaj liczbe całkowitą
+         * Podaj wiek:
+         * 12
+         * Nastolatek
+         */
     }
 
     private static void AgeVerification() {
@@ -87,5 +97,13 @@ public class Main {
             }
         } while (!isValid);
         return number;
+        }
+
+    private static void ageCategorization() {
+        int age = readAge();
+        if (age < 12) System.out.println("Dziecko");
+        else if (age < 18) System.out.println("Nastolatek");
+        else if (age < 65) System.out.println("Dorosły");
+        else System.out.println("Senior");
     }
 }
