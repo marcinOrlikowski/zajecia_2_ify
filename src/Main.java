@@ -21,7 +21,6 @@ public class Main {
          * 19
          * Jesteś pełnoletni
          */
-
     }
 
     private static void AgeVerification() {
